@@ -1,203 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varun Anand | AI & ML Engineer</title>
-    <meta name="description" content="Portfolio of Varun Anand, an AI & ML Engineer exploring the frontiers of Deep Learning, Computer Vision, and Full Stack Development.">
+    <title>Varun Anand | AI & ML Engineer | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap"
+        rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio of Varun Anand, AI/ML Engineering student and Full-Stack Developer specializing in deep learning, NLP, and modern web applications.">
+</head>
+
+<body>
+    <!-- Ambient Glows -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">VA.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="nav-container">
+            <a href="#home" class="logo">VA<span class="accent">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <span class="greeting">Hello, I'm</span>
-                <h1 class="name">Varun Anand</h1>
-                <h2 class="role">AI & ML Engineer</h2>
-                <p class="tagline">Bridging the gap between intelligent algorithms and impactful web solutions.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View Work</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+        <section id="home" class="hero section-padding">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <p class="greeting">Hello, world! I am</p>
+                    <h1 class="name">Varun Anand</h1>
+                    <h2 class="title">Building <span class="typing-text">intelligence</span><span
+                            class="cursor-typing">&nbsp;</span></h2>
+
+                    <p class="bio">
+                        An AI/ML Enthusiast and Full-Stack Developer currently pursuing a B.E. in Computer Science &
+                        Engineering (AI & ML) at Sri Sairam Engineering College, Chennai. I specialize in merging Deep
+                        Learning and modern web architectures to build impactful, intelligent applications.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:varunak2004@gmail.com">varunak2004@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+917305456008">+91 7305456008</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, India</span>
+                        </div>
+                    </div>
+
+                    <div class="action-btns">
+                        <a href="https://github.com/varun04-06" target="_blank" class="btn btn-outline"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/varun-anand-6269781bb/" target="_blank"
+                            class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Resume</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="glow-sphere"></div>
+
+                <div class="hero-visual reveal delay-1">
+                    <div class="shape-blob"></div>
+                    <div class="shape-blob blob-2"></div>
+                    <div class="profile-card glass-panel">
+                        <div class="profile-avatar">
+                            <h2>VA</h2>
+                        </div>
+                        <div class="profile-details">
+                            <h3>Varun Anand</h3>
+                            <p>AI & ML Engineer</p>
+                            <div class="tech-stack-mini">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fab fa-react" title="React"></i>
+                                <i class="fas fa-database" title="SQL"></i>
+                                <i class="fas fa-brain" title="Machine Learning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="card education-card">
-                <div class="card-header">
-                    <h3>Sri Sairam Engineering College, Chennai</h3>
-                    <span class="date">Oct 2022 – May 2026</span>
+        <!-- Skills Section -->
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+                    <div class="line-decorator"></div>
                 </div>
-                <p class="degree">B.E. Computer Science & Engineering (AI & ML)</p>
-                <p class="grade">CGPA: 8.22</p>
+
+                <div class="skills-grid">
+                    <!-- Programming -->
+                    <div class="skill-card glass-panel reveal delay-1">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Core AI/ML -->
+                    <div class="skill-card glass-panel reveal delay-2">
+                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Core AI/ML</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">LLMs</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="skill-card glass-panel reveal delay-3">
+                        <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">scikit-learn</span>
+                            <span class="tag">YOLO</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">LangChain</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend / DB -->
+                    <div class="skill-card glass-panel reveal delay-1">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & DB</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-card glass-panel reveal delay-2">
+                        <div class="skill-icon"><i class="fab fa-react"></i></div>
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="tag">React.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-card glass-panel reveal delay-3">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Ecosystem</h3>
+                        <div class="skill-tags">
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Git & GitHub</span>
+                            <span class="tag">Roboflow</span>
+                            <span class="tag">Ollama</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">Jun 2025 – Jul 2025</span>
-                        <h3>Full-Stack Development Intern</h3>
-                        <h4>Airport Authority of India</h4>
-                        <ul>
-                            <li>Architected and deployed a full-stack Stock Monitoring System using React.js, Node.js, Express.js, and MySQL.</li>
-                            <li>Integrated Excel import/export and role-based controls, reducing manual reconciliation time by ~90%.</li>
-                            <li>Migrated backend to a cloud-hosted MySQL infrastructure, boosting uptime by ~25%.</li>
-                        </ul>
-                    </div>
+        <section id="experience" class="experience section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+                    <div class="line-decorator"></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">Jun 2024 – Jul 2024</span>
-                        <h3>Research Intern</h3>
-                        <h4>Council of Scientific and Industrial Research (CSIR)</h4>
-                        <ul>
-                            <li>Implemented a YOLO-based deep learning pipeline for detecting timber defects in terahertz imagery (F1 score > 0.97).</li>
-                            <li>Developed a defect dimension estimation module with < 4% measurement error.</li>
-                            <li>Co-authored a publication in the <em>Journal of Nondestructive Evaluation (Springer)</em>.</li>
-                        </ul>
+
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-header">
+                                <div class="job-info">
+                                    <h3>Research Intern</h3>
+                                    <h4>Council of Scientific and Industrial Research (CSIR), Taramani</h4>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> Jun 2024 - Jul 2024</span>
+                                    <span class="duration">30 Days</span>
+                                </div>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Implemented a YOLO-based deep learning pipeline for detecting timber defects in
+                                    terahertz imagery, achieving an F1 score above 0.97 and improving detection
+                                    accuracy.</li>
+                                <li>Developed a defect dimension estimation module with less than 4% measurement error,
+                                    enhancing precision in automated quality control.</li>
+                                <li>Standardized benchmarking protocols for reproducible research, optimizing system
+                                    parameters to boost model performance by 12%.</li>
+                                <li>Co-authored a publication in the Journal of Nondestructive Evaluation (Springer).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item reveal delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <div class="timeline-header">
+                                <div class="job-info">
+                                    <h3>Full-Stack Development Intern</h3>
+                                    <h4>Airport Authority of India</h4>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="date"><i class="far fa-calendar-alt"></i> Jun 2025 - Jul 2025</span>
+                                    <span class="duration">15 Days</span>
+                                </div>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Architected and deployed a full-stack Stock Monitoring System using React.js,
+                                    Node.js, Express.js, and MySQL, enabling real-time tracking of 300+ IT assets.</li>
+                                <li>Integrated Excel import/export, interactive dashboards, and role-based controls,
+                                    reducing manual reconciliation time by ~90% and improving asset retrieval speed by
+                                    ~30%.</li>
+                                <li>Migrated backend to a cloud-hosted MySQL infrastructure with automated reporting
+                                    pipelines, boosting uptime by ~25% and inventory accuracy by 30%.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Natural Language SQL Analytics</h3>
-                        <div class="tech-stack">
-                            <span>React.js</span><span>FastAPI</span><span>PyTorch</span><span>FLAN-T5</span>
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                    <div class="line-decorator"></div>
+                </div>
+
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-panel reveal delay-1">
+                        <div class="project-top">
+                            <div class="project-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">LLM-Based AI Interview Assistant</h3>
+                        <p class="project-desc">
+                            Developed an AI-powered interview assistant using Lang-Chain and Mistral-7B to dynamically
+                            generate role-specific technical questions and evaluate candidate responses in real time.
+                            Features hybrid semantic similarity scoring with embeddings.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Built full-stack system with FastAPI & React</li>
+                            <li>Delivered structured feedback & analytics</li>
+                            <li>Optimized prompt engineering for reduced hallucinations</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>LangChain</span>
+                            <span>Mistral-7B</span>
+                            <span>FastAPI</span>
+                            <span>React</span>
                         </div>
                     </div>
-                    <p>Developed AI Ticket Analytics, an NLP-powered tool that lets users query support ticket data in natural language instead of SQL, automatically generating secure, optimized database queries and visualizing results through an interactive chat interface with charts and tables to make insights accessible for non-technical users. </p>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Smart Railway Surveillance</h3>
-                        <span class="status-badge">In Progress</span>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-panel reveal delay-2">
+                        <div class="project-top">
+                            <div class="project-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Natural Language SQL Analytics</h3>
+                        <p class="project-desc">
+                            Developed AI Ticket Analytics, an AI-driven application that allows users to analyze support
+                            ticket data using natural language queries, removing the dependency on SQL. Designed a
+                            chat-based UI with interactive data visualizations.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>NLP translation to secure DB queries</li>
+                            <li>Integrated charts and metric tables</li>
+                            <li>Enhanced decision-making for non-technical users</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>NLP</span>
+                            <span>SQL</span>
+                            <span>JavaScript</span>
+                            <span>Data Viz</span>
+                        </div>
                     </div>
-                    <div class="tech-stack">
-                        <span>YOLO</span><span>Raspberry Pi</span><span>Ultrasonic Sensors</span>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-panel reveal delay-3">
+                        <div class="project-top">
+                            <div class="project-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/varun04-06/shl-project/blob/main/code" target="_blank"
+                                    aria-label="GitHub Repo"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">SHL Assessment Recommendation System</h3>
+                        <p class="project-desc">
+                            An AI-powered application that uses semantic search to recommend SHL assessments based on
+                            natural language queries or job descriptions, replacing manual catalog browsing.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Semantic matching via FAISS vector database</li>
+                            <li>Automated data scraping with Selenium</li>
+                            <li>Fast REST API powered by FastAPI</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>FAISS</span>
+                            <span>Transformers</span>
+                        </div>
                     </div>
-                    <p>Railway monitoring prototype with sub-200 ms latency object detection. Projects to reduce incident response time by 40% across 2+ km of track coverage.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Core</h3>
-                    <div class="tags">
-                        <span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>NLP</span>
-                    </div>
+        <!-- Education & Certifications Section -->
+        <section id="education" class="edu-cert section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Education & <span class="accent">More</span></h2>
+                    <div class="line-decorator"></div>
                 </div>
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="tags">
-                        <span>Java</span><span>Python</span><span>SQL</span><span>JavaScript</span>
+
+                <div class="edu-cert-grid">
+                    <!-- Left Column: Education & Publications -->
+                    <div class="left-col gap-group">
+                        <!-- Education -->
+                        <div class="subsection reveal">
+                            <div class="subsection-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Education</h3>
+                            </div>
+                            <div class="edu-card glass-panel">
+                                <h4>Sri Sairam Engineering College, Chennai</h4>
+                                <p class="degree">Bachelor of Engineering - Computer Science & Engineering (AI & ML)</p>
+                                <div class="edu-footer">
+                                    <span class="date">Oct 2022 - May 2026</span>
+                                    <span class="grade tag highlight-tag">CGPA: 8.27</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Publications -->
+                        <div class="subsection reveal delay-1">
+                            <div class="subsection-title">
+                                <i class="fas fa-book-open"></i>
+                                <h3>Publications</h3>
+                            </div>
+                            <div class="glass-panel pub-card">
+                                <h4>Artificial Intelligence-Driven Timber Wood Defect Characterization from Terahertz
+                                    Images</h4>
+                                <p class="publisher">Journal of Nondestructive Evaluation (Springer) &bull; Oct 2024</p>
+                                <a href="https://link.springer.com/article/10.1007/s10921-024-01130-4" target="_blank"
+                                    class="external-link mt-2"><i class="fas fa-external-link-alt"></i> Read Article</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frontend & Backend</h3>
-                    <div class="tags">
-                        <span>React.js</span><span>HTML/CSS</span><span>Node.js</span><span>Express.js</span><span>FastAPI</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Frameworks</h3>
-                    <div class="tags">
-                        <span>TensorFlow</span><span>YOLO</span><span>OpenCV</span><span>Git</span><span>VS Code</span>
+
+                    <!-- Right Column: Certifications -->
+                    <div class="right-col subsection reveal delay-2">
+                        <div class="subsection-title">
+                            <i class="fas fa-award"></i>
+                            <h3>Certifications</h3>
+                        </div>
+                        <div class="glass-panel cert-container">
+                            <ul class="cert-list">
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>NPTEL</strong>
+                                        <span>Deep Learning, Cloud Computing, Compiler Design, Design & Implementation
+                                            of HCI.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>Simplilearn - Skill UP</strong>
+                                        <span>TensorFlow for Beginners, Power BI for Beginners.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>Cisco</strong>
+                                        <span>Certified Network Associate (Student level) - Python essentials 1,
+                                            2.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>IIT Spoken Tutorial</strong>
+                                        <span>Python, Java, PHP&SQL, Arduino Training.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>Novitech Private Limited</strong>
+                                        <span>Introduction to Full Stack Development.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-icon"><i class="fas fa-check"></i></div>
+                                    <div class="cert-details">
+                                        <strong>TCS Forage</strong>
+                                        <span>Cybersecurity Analyst Job Simulation.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Publications & Certifications -->
-        <section id="achievements" class="section">
-            <div class="grid-2-col">
-                <div class="publications">
-                    <h2 class="section-title">Publications</h2>
-                    <div class="card">
-                        <p><strong>Artificial Intelligence-Driven Timber Wood Defect Characterization from Terahertz Images</strong></p>
-                        <p class="subtitle">Journal of Nondestructive Evaluation (Springer), Oct 2024</p>
-                        <a href="https://link.springer.com/article/10.1007/s10921-024-01130-4" target="_blank" class="link-text">Read Paper <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="certifications">
-                    <h2 class="section-title">Certifications</h2>
-                    <ul class="cert-list">
-                        <li>IIT Spoken Tutorial - Python, Java, PHP&SQL, Arduino</li>
-                        <li>NPTEL - Deep Learning, Cloud Computing, Compiler Design</li>
-                        <li>Novitech Private Limited - Full Stack Development</li>
-                        <li>Simplilearn - TensorFlow, Power BI</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-card">
-                <p>Feel free to reach out for collaborations or opportunities.</p>
-                <div class="contact-links">
-                    <a href="mailto:varunak2004@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> varunak2004@gmail.com
-                    </a>
-                    <a href="https://www.linkedin.com/in/varun-anand-6269781bb/" target="_blank" class="contact-item">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/varun04-06" target="_blank" class="contact-item">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> Chennai, India</p>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; <span id="year"></span> Varun Anand.</p>
-        </footer>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <a href="#home" class="footer-logo">VA<span class="accent">.</span></a>
+                <div class="footer-socials">
+                    <a href="mailto:varunak2004@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/varun04-06" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/varun-anand-6269781bb/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varun Anand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
