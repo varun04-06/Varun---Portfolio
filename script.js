@@ -1,61 +1,139 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Custom Cursor
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+const cursorFollower = document.querySelector('.cursor-follower');
+const links = document.querySelectorAll('a, .btn, .nav-links li');
 
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
+// Check if device is touch or has no fine pointer
+const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
+if (!isTouchDevice) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        
+        // Add a slight delay for follower
+        setTimeout(() => {
+            cursorFollower.style.left = e.clientX + 'px';
+            cursorFollower.style.top = e.clientY + 'px';
+        }, 50);
     });
 
-    // Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when link is clicked
-    document.querySelectorAll('.nav-links li a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('active');
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorFollower.style.borderColor = 'var(--accent-secondary)';
+        });
+        
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('active');
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorFollower.style.borderColor = 'var(--accent)';
         });
     });
+}
 
-    // Dynamic Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+// Mobile Navbar Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-    // Scroll Animation (Intersection Observer)
-    const observerOptions = {
-        threshold: 0.1
-    };
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target); // Only animate once
-            }
-        });
-    }, observerOptions);
+// Close menu when link is clicked
+document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+}));
 
-    // Fade-in elements on scroll
-    // We add a 'hidden' class via JS first to avoid FOUC if JS is disabled
-    const hiddenElements = document.querySelectorAll('.section-title, .education-card, .timeline-item, .project-card, .skill-category, .card, .contact-card');
+// Sticky Navbar Background
+const navbar = document.querySelector('.navbar');
 
-    hiddenElements.forEach(el => {
-        el.classList.add('hidden');
-        observer.observe(el);
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Typing Effect for Hero Section
+const textArray = ["AI-driven solutions.", "Intelligent Systems.", "Full-Stack Web Apps.", "Predictive Models."];
+const typingDelay = 100;
+const erasingDelay = 50;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+
+const typedTextSpan = document.querySelector(".typing-text");
+
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        setTimeout(erase, newTextDelay);
+    }
+}
+
+function erase() {
+    if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+// Scroll Reveal Animation (Intersection Observer)
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
+// Trigger once on load
+reveal();
+
+// Active Link highlighting on Scroll
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(li => {
+        li.classList.remove('active');
+        if (li.getAttribute('href') === `#${current}`) {
+            li.classList.add('active');
+        }
     });
 });
